@@ -1,0 +1,18 @@
+//часть кода рабочая, часть нет
+uses graphwpf;
+begin
+  SetMathematicCoords(-20,20);//делается координатная плоскость
+  var a := Pnt(0,0);
+  var b := Pnt(0,10);
+  var c := Pnt(Sqrt(75),5);
+  PolyLine(Arr(a,b,c,a)); //рисует ломаную линию
+  var cnt := 0;
+  {for var x := 1 to 10 do
+    for var y := 1 to 10 do
+      if Pnt(x,y).IsBelowLine(b,c) and Pnt(x,y).IsAboveLine(a,c) then
+      begin
+        FillCircle(x,y,0.1,Colors.Red);
+        cnt += 1;
+      end;}
+   Print(cnt);
+end.
