@@ -1,0 +1,18 @@
+uses GraphWPF;
+
+begin
+SetMathematicCoords(-20,20,true);
+
+var a := new Point[5];
+
+a[3] := new Point(1,1);
+
+a[0] := new Point(-2,4);
+a[1] := new Point(-1,1);
+a[2] := new Point(0,0);
+a[3] := new Point(1,1);
+a[4] := new Point(2,4);
+
+PolyLine(a);
+//Polygon(a); делается замкнутая область, если что
+end.
