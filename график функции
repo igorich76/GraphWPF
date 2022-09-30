@@ -31,3 +31,19 @@ PolyLine(a); //график функции
 //Polygon(a); //замкнутая область
 
 //ну, как-то так...
+////////////////////////----переделанная первая программа, введена функция------//////////////////////////////
+function Func(x: integer): integer;
+begin
+  result := x * x;
+end;
+
+begin
+var y, x: integer;
+for var i := 1 to 5 do
+begin
+  Write('Введите значение х', i, '>>');
+  Read(x);
+  y := x * x;
+  Println(Func(x));
+end; 
+end.
