@@ -1,4 +1,5 @@
 ## мой вариант
+##
 uses GraphWPF; // Флаг России
 Window.Width := 370;
 Window.Height := 250;
@@ -8,14 +9,14 @@ Window.Title := 'Флаг России';
 var (x,y,band_width,flag_length) := (30,20,70,315);//ширина полосы, длина флага
 //белая полоса
 DrawRectangle(x,y,flag_length,band_width);
-FillRectangle(x,y+band_width,flag_length,band_width,Colors.White);
+FillRectangle(x,y+band_width,flag_length,band_width,RGB(255,255,255));
 //синяя полоса
 DrawRectangle(x,y+band_width,flag_length,band_width);
-FillRectangle(x,y+band_width,flag_length,band_width,Colors.Blue);
+FillRectangle(x,y+band_width,flag_length,band_width,RGB(0,57,166));
 //красная полоса
 y += band_width;
 DrawRectangle(x,y+band_width,flag_length,band_width);
-FillRectangle(x,y+band_width,flag_length,band_width,Colors.Red);
+FillRectangle(x,y+band_width,flag_length,band_width,RGB(213,43,30));
 ////////////////////////////////////////
 //вариант ментора
 ##
