@@ -1,0 +1,40 @@
+## мой вариант
+uses GraphWPF; // Флаг России
+Window.Width := 370;
+Window.Height := 250;
+Window.CenterOnScreen;
+Window.Title := 'Флаг России';
+
+var (x,y,band_width,flag_length) := (30,20,70,315);//ширина полосы, длина флага
+//белая полоса
+DrawRectangle(x,y,flag_length,band_width);
+FillRectangle(x,y+band_width,flag_length,band_width,Colors.White);
+//синяя полоса
+DrawRectangle(x,y+band_width,flag_length,band_width);
+FillRectangle(x,y+band_width,flag_length,band_width,Colors.Blue);
+//красная полоса
+y += band_width;
+DrawRectangle(x,y+band_width,flag_length,band_width);
+FillRectangle(x,y+band_width,flag_length,band_width,Colors.Red);
+////////////////////////////////////////
+//вариант ментора
+##
+uses GraphWPF; // Флаг России
+Window.Width := 370;
+Window.Height := 250;
+Window.CenterOnScreen;
+Window.Title := 'Флаг России';
+
+var (x,y,band_width,flag_length) := (30,20,70,315);//ширина полосы, длина флага
+//рамка
+DrawRectangle(x,y,flag_length,band_width*3);
+
+//белый
+FillRectangle(x,y+band_width,flag_length,band_width,Colors.White);
+
+//синий
+FillRectangle(x,y+band_width,flag_length,band_width,Colors.Blue);
+
+y += band_width;
+//красный
+FillRectangle(x,y+band_width,flag_length,band_width,Colors.Red);
