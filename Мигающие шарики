@@ -1,0 +1,23 @@
+##
+uses GraphWPF,WPFObjects;
+Window.Clear(Colors.LightGray);
+Window.Height := 200;
+Window.Width := 700;
+Window.CenterOnScreen;
+
+var a := new CircleWPF(100,100,50,colors.White);
+var b := new CircleWPF(200,100,50,colors.Black);
+var c := new CircleWPF(300,100,50,colors.White);
+var d := new CircleWPF(400,100,50,colors.Black);
+var e := new CircleWPF(500,100,50,colors.White);
+var f := new CircleWPF(600,100,50,colors.Black);
+while true do
+begin
+  Sleep(100);
+  a.Color := RandomColor;
+  b.Color := RandomColor;
+  c.Color := RandomColor;
+  d.Color := RandomColor;
+  e.Color := RandomColor;
+  f.Color := RandomColor;
+end;
