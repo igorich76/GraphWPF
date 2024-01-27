@@ -2,10 +2,8 @@ uses GraphWPF,WPFObjects;
 
 var myRect: RectangleWPF;
 
-procedure mouseDown(x,y: real; m: integer);
-begin
-  if (x in 100..200) and (y in 100..150) and (m = 1) then myRect.Color := Colors.Blue;
-end;
+procedure mouseDown(x,y: real; m: integer) := if (x in 100..200) and (y in 100..150) and (m = 1) 
+    then myRect.Color := Colors.BlueViolet;
 
 begin
 Window.Clear(Colors.LightGray);
