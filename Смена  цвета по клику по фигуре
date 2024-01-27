@@ -1,0 +1,19 @@
+uses GraphWPF,WPFObjects;
+
+var myRect: RectangleWPF;
+
+procedure mouseDown(x,y: real; m: integer);
+begin
+  if (x in 100..200) and (y in 100..150) and (m = 1) then myRect.Color := Colors.Blue;
+end;
+
+begin
+Window.Clear(Colors.LightGray);
+Window.Height := 300;
+Window.Width := 400;
+Window.CenterOnScreen;
+
+myRect := new RectangleWPF(100,100,100,50,colors.Red);
+myRect.Color := Colors.Red;
+OnMouseDown := mouseDown;
+end.
