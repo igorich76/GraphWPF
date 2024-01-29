@@ -1,0 +1,4 @@
+##
+uses GraphWPF, WPFObjects;
+var a := new RectangleWPF(10,200,100,50,colors.Red);
+a.AnimMoveBy(680,0,3);
