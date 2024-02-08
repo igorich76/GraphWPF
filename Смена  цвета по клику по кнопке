@@ -1,0 +1,39 @@
+uses GraphWPF,WPFObjects;
+
+var myRect: RectangleWPF;
+
+procedure mouseDown(x,y: real; m: integer) := if (x in 100..200) and (y in 100..150) and (m = 1) 
+    then myRect.Color := Colors.BlueViolet;
+
+begin
+Window.Clear(Colors.LightGray);
+Window.Height := 300;
+Window.Width := 400;
+Window.CenterOnScreen;
+
+myRect := new RectangleWPF(100,100,100,50,colors.Red);
+myRect.Color := Colors.Red;
+OnMouseDown := mouseDown;
+end.
+////////////// прогресс в изучении Графики! /////////////////////
+##
+uses GraphWPF,Controls,WPFObjects;
+
+Window.Title := 'Пробую красивое окно';
+  Window.SetSize(640,480);
+  Window.CenterOnScreen;
+  Brush.Color := Colors.LightGray;
+  Rectangle(10,10,Window.Width-20,Window.Height-20);
+
+
+Button(200,200,'Прямоугольник',200,20).Click := () → 
+begin
+Rectangle(20,20,600,150);    
+end;
+
+Button(200,250,'Сменить цвет',200,20).Click := () → 
+begin
+FillRectangle(20,20,600,150,RandomColor);    
+end;
+
+Button(200,300,'Выход',200,20).Click := procedure → Window.Close;
