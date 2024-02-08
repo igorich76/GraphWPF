@@ -16,24 +16,19 @@ myRect.Color := Colors.Red;
 OnMouseDown := mouseDown;
 end.
 ////////////// прогресс в изучении Графики! /////////////////////
-##
-uses GraphWPF,Controls,WPFObjects;
+## // работа по кнопкам
+uses GraphWPF, Controls, WPFObjects;
 
-Window.Title := 'Пробую красивое окно';
-  Window.SetSize(640,480);
-  Window.CenterOnScreen;
-  Brush.Color := Colors.LightGray;
-  Rectangle(10,10,Window.Width-20,Window.Height-20);
+Window.Title := 'Работа с кнопками';
+Window.SetSize(640, 480);
+Window.CenterOnScreen;
+Brush.Color := Colors.LightGray;
+Rectangle(10, 10, Window.Width - 20, Window.Height - 20);
 
+Button(200, 200, 'Прямоугольник', 200, 20).Click := () → Rectangle(20, 20, 600, 150);
 
-Button(200,200,'Прямоугольник',200,20).Click := () → 
-begin
-Rectangle(20,20,600,150);    
-end;
+Button(200, 250, 'Сменить цвет', 200, 20).Click := () → FillRectangle(20, 20, 600, 150, RandomColor);
 
-Button(200,250,'Сменить цвет',200,20).Click := () → 
-begin
-FillRectangle(20,20,600,150,RandomColor);    
-end;
+Button(200, 300, 'Выход', 200, 20).Click := procedure → Window.Close; 
 
 Button(200,300,'Выход',200,20).Click := procedure → Window.Close;
