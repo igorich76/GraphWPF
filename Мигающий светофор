@@ -2,7 +2,7 @@
 uses GraphWPF,WPFObjects;
 Window.Clear(Colors.LightGreen);
 Window.Height := 600;
-Window.Width := 800;
+Window.Width := 350;
 Window.CenterOnScreen;
 //
 Brush.Color := Colors.LightGray;
@@ -19,7 +19,7 @@ var c3 := new CircleWPF(175,435,55,colors.White);
 //
 while true do
   begin
-    Sleep(1000);
+    Sleep(500);
     c1.Color := Colors.Red;
     Sleep(1500);
     c2.Color := Colors.Yellow;
@@ -28,7 +28,7 @@ while true do
     c2.Color := Colors.White;
     Sleep(100);
     c3.Color := Colors.Green;
-    Sleep(2000);
+    Sleep(1500);
     c1.Color := Colors.White;
     c2.Color := Colors.White;
     c3.Color := Colors.White;
