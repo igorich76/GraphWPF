@@ -33,3 +33,48 @@ while true do
     c2.Color := Colors.White;
     c3.Color := Colors.White;
   end;
+////////////////// усовершенствовал, кнопку добавил //////////////
+##
+uses GraphWPF,WPFObjects,Controls;
+Window.Clear(Colors.LightGreen);
+Window.Height := 600;
+Window.Width := 350;
+Window.CenterOnScreen;
+//
+Brush.Color := Colors.LightGray;
+Rectangle(100,100,150,400);
+
+DrawCircle(175,165,55,colors.Black);
+var c1 := new CircleWPF(175,165,55,colors.White);
+//
+DrawCircle(175,300,55,colors.Black);
+var c2 := new CircleWPF(175,300,55,colors.White);
+//
+DrawCircle(175,435,55,colors.Black);
+var c3 := new CircleWPF(175,435,55,colors.White);
+//
+var button_Кнопка := new ButtonWPF(100,520,'Случайный цвет',150,18);
+button_Кнопка.Click := () → 
+begin
+  Sleep(50);
+  c1.Color := RandomColor;
+  c2.Color := RandomColor;  
+  c3.Color := RandomColor;
+end;
+//
+while true do
+  begin
+    Sleep(500);
+    c1.Color := Colors.Red;
+    Sleep(1500);
+    c2.Color := Colors.Yellow;
+    Sleep(2500);
+    c1.Color := Colors.White;
+    c2.Color := Colors.White;
+    Sleep(100);
+    c3.Color := Colors.Green;
+    Sleep(1500);
+    c1.Color := Colors.White;
+    c2.Color := Colors.White;
+    c3.Color := Colors.White;
+  end;
